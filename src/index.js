@@ -4,7 +4,7 @@ function updateTime() {
   if (santiagoElement) {
     let santiagoDateElement = santiagoElement.querySelector(".date");
     let santiagoTimeElement = santiagoElement.querySelector(".time");
-    let santiagoTime = moment().tz("America/santiago");
+    let santiagoTime = moment().tz("America/Santiago");
 
     santiagoDateElement.innerHTML = santiagoTime.format("Do MMMM YYYY");
     santiagoTimeElement.innerHTML = santiagoTime.format(
@@ -19,7 +19,7 @@ function updateTime() {
   if (melbourneElement) {
     let melbourneDateElement = melbourneElement.querySelector(".date");
     let melbourneTimeElement = melbourneElement.querySelector(".time");
-    let melbourneTime = moment().tz("Australia/melbourne");
+    let melbourneTime = moment().tz("Australia/Melbourne");
 
     melbourneDateElement.innerHTML = melbourneTime.format("Do MMMM YYYY");
     melbourneTimeElement.innerHTML = melbourneTime.format(
@@ -31,7 +31,7 @@ function updateTime() {
   if (bangkokElement) {
     let bangkokDateElement = bangkokElement.querySelector(".date");
     let bangkokTimeElement = bangkokElement.querySelector(".time");
-    let bangkokTime = moment().tz("Asia/bangkok");
+    let bangkokTime = moment().tz("Asia/Bangkok");
 
     bangkokDateElement.innerHTML = bangkokTime.format("Do MMMM YYYY");
     bangkokTimeElement.innerHTML = bangkokTime.format(
@@ -40,8 +40,8 @@ function updateTime() {
   }
 }
 
-/*updateTime();
-setInterval(updateTime, 100);*/
+updateTime();
+setInterval(updateTime, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
@@ -62,7 +62,7 @@ function updateCity(event) {
         </div>
         <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format("A")}</small></div>
       </div>
-      <a href="/">All cities</a>
+      <a href="./index.html">All cities</a>
       `;
 }
 
