@@ -26,6 +26,18 @@ function updateTime() {
       "h:mm:ss[<small>]A[</small>]",
     );
   }
+
+  let bangkokElement = document.querySelector("#bangkok");
+  if (bangkokElement) {
+    let bangkokDateElement = bangkokElement.querySelector(".date");
+    let bangkokTimeElement = bangkokElement.querySelector(".time");
+    let bangkokTime = moment().tz("Asia/bangkok");
+
+    bangkokDateElement.innerHTML = bangkokTime.format("Do MMMM YYYY");
+    bangkokTimeElement.innerHTML = bangkokTime.format(
+      "h:mm:ss[<small>]A[</small>]",
+    );
+  }
 }
 
 /*updateTime();
